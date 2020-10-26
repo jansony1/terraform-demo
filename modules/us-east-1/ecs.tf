@@ -1,7 +1,7 @@
 # ecs.tf
 
-resource "aws_ecs_cluster" "global_deploy" {
-  name = "global_deploy"
+resource "aws_ecs_cluster" "main" {
+  name = "myapp-cluster"
 }
 
 data "template_file" "myapp" {

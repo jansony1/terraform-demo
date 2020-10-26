@@ -1,9 +1,8 @@
+# _provider.tf
+provider "aws" "us-east-1"{
+  region = "us-east-1" 
+}
 
-# provider.tf
-
-# Specify the provider and access details
-provider "aws" {
-  shared_credentials_file = "$HOME/.aws/credentials"
-  profile                 = "default"
-  region                  = var.aws_region
+provider "aws" "us-west-2"{
+  region = "us-west-2"
 }

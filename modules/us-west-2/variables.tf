@@ -18,8 +18,6 @@ variable "aws_iam_role_policy_attachment" {
 }
 
 
-
-
 variable "az_count" {
   description = "Number of AZs to cover in a given region"
   default     = "2"
@@ -28,6 +26,11 @@ variable "az_count" {
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
   default     = "nginx:latest"
+}
+
+variable "log_path" {
+  description = "Docker image to run in the ECS cluster"
+  default     = "/ecs/myapp/us-west-2"
 }
 
 variable "app_port" {

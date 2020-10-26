@@ -2,7 +2,7 @@
 
 # Set up CloudWatch group and log stream and retain logs for 30 days
 resource "aws_cloudwatch_log_group" "myapp_log_group" {
-  name              = "/ecs/myapp"
+  name              = var.log_path
   retention_in_days = 30
 
   tags = {

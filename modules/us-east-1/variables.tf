@@ -15,6 +15,11 @@ variable "app_image" {
   default     = "nginx:latest"
 }
 
+variable "log_path" {
+  description = "Docker image to run in the ECS cluster"
+  default     = "/ecs/myapp/us-east-1"
+}
+
 
 variable "aws_iam_role" {
   description = "ECS task execution role name"

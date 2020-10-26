@@ -18,7 +18,7 @@ data "template_file" "myapp" {
 
 resource "aws_ecs_task_definition" "app" {
   family                   = "myapp-task"
-  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
+  execution_role_arn       = var.aws_iam_role.ecs_task_execution_role.arn
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   cpu                      = var.fargate_cpu
@@ -45,5 +45,5 @@ resource "aws_ecs_service" "main" {
     container_port   = var.app_port
   }
 
-  depends_on = [aws_alb_listener.front_end, aws_iam_role_policy_attachment.ecs_task_execution_role]
+  depends_on = [aws_alb_listener.front_end, var.aws_iam_role_policy_attachment.ecs_task_execution_role]
 }

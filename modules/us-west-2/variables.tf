@@ -6,6 +6,19 @@ variable "aws_region" {
 }
 
 
+variable "aws_iam_role" {
+  description = "ECS task execution role name"
+  default = "myEcsTaskExecutionRole"
+}
+
+
+variable "aws_iam_role_policy_attachment" {
+  description = "iam policy attachment"
+  default = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+
+
 
 variable "az_count" {
   description = "Number of AZs to cover in a given region"

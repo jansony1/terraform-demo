@@ -15,6 +15,20 @@ variable "app_image" {
   default     = "nginx:latest"
 }
 
+
+variable "aws_iam_role" {
+  description = "ECS task execution role name"
+  default = "myEcsTaskExecutionRole"
+}
+
+
+variable "aws_iam_role_policy_attachment" {
+  description = "iam policy attachment"
+  default = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+
+
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
   default     = 80

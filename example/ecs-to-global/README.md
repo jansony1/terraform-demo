@@ -11,7 +11,8 @@ However, you may add or modify **hardcoded** region as you like.
 1. Enough IAM right 
    * Provision infra
    * Provision ecs
-2. 
+2. Ensure enough resoure 
+   * As this demo will provision entire aws infra onto us-east-1 and us-west-2, you have to ensure you** EIP** and other resource **does not exceed the limit**
 3. [Terraform version >= v0.13](https://www.terraform.io/downloads.html)
 
 

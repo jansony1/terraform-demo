@@ -19,6 +19,8 @@ However, you may add or modify **hardcoded** region as you like.
 
 ### How to
 
+#### 1.Provision
+
 * Download repo
 
   ```
@@ -44,6 +46,41 @@ However, you may add or modify **hardcoded** region as you like.
   terraform apply -auto-apply
   ```
 
+#### 2. Update Task
+
+* Modify image
+
+  ```
+  $ example/ecs-to-global: vim terraform.tfvars
+  
+  app_image = "nginx:1.19"
+  app_count = "2"
+  ```
+
+   Change image from **1.19 to 1.19.3**
+
+  ```
+  $ example/ecs-to-global: cat terraform.tfvars
+  
+  app_image = "nginx:1.19.3"
+  app_count = "2"
+  ```
+
+* Examine which resouce will be  changed
+
+  ```
+  terraform plan
+  ```
+
+* Execute 
+
+  ```
+  terraform apply -auto-apply
+  ```
+
+  #### 
+
   
 
+  
 
